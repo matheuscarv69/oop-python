@@ -1,0 +1,5 @@
+Success: It's works - LogFileMixin
+Error: whatever - LogFileMixin
+Success: It's works - LogFileMixin
+Error: whatever - LogFileMixin
+Success: It's works - LogFileMixin

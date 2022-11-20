@@ -4,7 +4,7 @@ Agregação
 Basicamente uma classe não pode existir sem algo que ela dependa:
 Ex.:
 
-Um carro não funciona sem motor.
+Um carro não anda sem pneus.
 Uma casa precisa de uma porta para se entrar
 
 """
