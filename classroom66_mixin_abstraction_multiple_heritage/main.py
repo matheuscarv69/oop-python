@@ -1,9 +1,7 @@
-from log import LogFileMixin, LogPrintMixin
+from eletronic import Smartphone
 
-log_print = LogPrintMixin()
-log_print.log_error('whatever')
-log_print.log_success("It's works")
+iphone_14 = Smartphone('Iphone 14')
+galaxy = Smartphone('Galaxy')
 
-log_file = LogFileMixin()
-log_file.log_error('whatever')
-log_file.log_success("It's works")
+iphone_14.turn_on()
+galaxy.turn_off()
