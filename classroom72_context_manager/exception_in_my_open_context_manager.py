@@ -46,12 +46,19 @@ class MyOpen:
     O método __exit__ receberá a classe de exceção, a exceção e o
     traceback. Se ele retornar True, exceções no with serão suprimidas.
     """
+
     def __exit__(self, class_exception, exception_, traceback_):
         print('Closing file')
+        print("EXIT\n")
 
         self._file.close()
 
-        print("EXIT")
+        print('Exception Class: ', class_exception)
+        print('Exception: ', exception_)
+        print('Traceback: ', traceback_)
+
+        # A exceção deixa de ser lançada quando o __exit__ retorna True
+        return True
 
 
 # o método __init__ é chamado ao criar uma instância da classe
@@ -59,9 +66,8 @@ instance = MyOpen('log_history.txt', 'w')
 
 # o método __enter__ atribui o seu retorno à variável file
 with instance as file:
-
     file.write("Log info: 1 \n")
-    file.write("Log info: 2 \n")
+    file.write("Log info: 2 \n", 123)  # deve dar erro
     file.write("Log info: 3 \n")
 
     print("WITH", file)
